@@ -70,18 +70,14 @@ namespace DevExpressSqlserver.Controllers
 
             int userId = int.Parse(userIdString);
             try
-            {
-              
+            {              
                 var tipoGasto = new TipoGasto();
                 JsonConvert.PopulateObject(values, tipoGasto);
 
-               // FondosMonetariosValidator.Validate(tipoGasto);
-                //if (ProductGuard.IsValid)
-                //{
                 tipoGasto.UsuarioId = userId;
                 _context.TiposGasto.Add(tipoGasto);
                 _context.SaveChanges();
-                //}
+          
                 return Json(tipoGasto);
             }
             catch (ArgumentException ex)
