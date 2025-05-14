@@ -126,8 +126,8 @@ namespace DevExpressSqlserver.Controllers
         {
             var tipos = _context.TiposGasto
           .Select(t => new {
-              t.TipoGastoID,        // ValueExpr debe ser exactamente este nombre
-              t.Descripcion         // DisplayExpr debe ser exactamente este nombre
+              t.TipoGastoID,       
+              t.Descripcion        
           })
           .ToList();
 
