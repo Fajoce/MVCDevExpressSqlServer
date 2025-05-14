@@ -1,7 +1,7 @@
 # Requisitos
 - Visual studio 2022 - Framework 8.0
 - DevExpress version 24.2.5 trial
-- Sql server 20.0
+- Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64)   Oct  8 2022 05:58:25   Copyright (C) 2022 Microsoft Corporation  Developer Edition (64-bit) on Windows 10 Home Single Language 10.0 <X64> (Build 26100: ) (Hypervisor) 
 
 # El usuario debera logerase si tiene una cuenta creada
 ![image](https://github.com/user-attachments/assets/e41f2cfe-9697-4789-8a5d-5ea4608781df)
