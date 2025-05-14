@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\movimientoregistrodegastoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\movimientoregistrodegastoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\filtrosmovimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\filtrosmovimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\models\\entities\\movimiento\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\models\\entities\\movimiento\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\devexpresssqlserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\devexpresssqlserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\movimientodepositoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,19 +59,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MovimientoRegistroDeGastosController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
+              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAuwIIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:46:28.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Movimiento.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "RelativeToolTip": "DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T19:00:53.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DevExpressSqlserver",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\DevExpressSqlserver.csproj",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\DevExpressSqlserver.csproj",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\DevExpressSqlserver.csproj",
+              "RelativeToolTip": "DevExpressSqlserver\\DevExpressSqlserver.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-14T18:01:47.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FiltrosMovimientosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
               "RelativeToolTip": "DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAjwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T16:55:39.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MovimientoDepositosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\MovimientoDepositosController.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\MovimientoDepositosController.cs",
@@ -67,11 +118,12 @@
               "RelativeToolTip": "DevExpressSqlserver\\Controllers\\MovimientoDepositosController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAjwB0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T16:55:39.664Z"
+              "WhenOpened": "2025-05-14T16:55:39.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Program.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Program.cs",
@@ -83,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "TiposGastosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\TiposGastosController.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\TiposGastosController.cs",
@@ -95,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "TipoGasto.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\TipoGasto\\TipoGasto.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Models\\Entities\\TipoGasto\\TipoGasto.cs",
@@ -107,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "TipoGastoGuard.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Guards\\TipoGastoGuard.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Models\\Guards\\TipoGastoGuard.cs",
@@ -119,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\GraficosComparativos\\Index.cshtml",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Views\\GraficosComparativos\\Index.cshtml",
@@ -131,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Views\\Shared\\_Layout.cshtml",

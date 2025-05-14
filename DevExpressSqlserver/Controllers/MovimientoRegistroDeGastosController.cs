@@ -63,33 +63,60 @@ namespace DevExpressSqlserver.Controllers
         {
             try
             {
-                // Crear una nueva instancia de Movimiento
                 var movimiento = new Movimiento();
-
-                // Deserializar los datos JSON en el objeto Movimiento
                 JsonConvert.PopulateObject(values, movimiento);
 
-                // Obtener el ID del usuario logueado desde los claims
+                // Obtener el ID del usuario logueado
                 var usuarioIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                 if (usuarioIdClaim == null)
-                    return Unauthorized(); // Si no se encuentra el ID del usuario, devolver 401
+                    return Unauthorized();
 
-                // Asignar el ID del usuario al movimiento
-                movimiento.UsuarioID = int.Parse(usuarioIdClaim);
+                int usuarioId = int.Parse(usuarioIdClaim);
+                movimiento.UsuarioID = usuarioId;
 
-                // Se puede agregar lógica adicional si se necesita, como asignar el TipoMovimiento o algún otro valor
-                // Por ejemplo, movimiento.TipoMovimiento = "Deposito";
+                // Validar el saldo solo si es un GASTO
+                if (movimiento.TipoMovimiento.ToLower() == "gasto")
+                {
+                    // Buscar el fondo asociado al movimiento
+                    var fondo = _context.FondosMonetarios
+                        .FirstOrDefault(f => f.FondoID == movimiento.FondoID && f.UsuarioId == usuarioId);
 
-                // Añadir el nuevo movimiento a la base de datos
+                    if (fondo == null)
+                    {
+                        return BadRequest(new { error = "Fondo no encontrado para este usuario." });
+                    }
+
+                    if (movimiento.Monto > fondo.Saldo)
+                    {
+                        return BadRequest(new
+                        {
+                            error = $"El monto del gasto ({movimiento.Monto:C}) excede el saldo disponible en el fondo ({fondo.Saldo:C})."
+                        });
+                    }
+
+                    // Restar el monto al saldo del fondo
+                    fondo.Saldo -= movimiento.Monto;
+                }
+                else if (movimiento.TipoMovimiento.ToLower() == "deposito")
+                {
+                    // Si es un depósito, aumentar el saldo del fondo
+                    var fondo = _context.FondosMonetarios
+                        .FirstOrDefault(f => f.FondoID == movimiento.FondoID && f.UsuarioId == usuarioId);
+
+                    if (fondo != null)
+                    {
+                        fondo.Saldo += movimiento.Monto;
+                    }
+                }
+
+                // Guardar el movimiento
                 _context.Movimientos.Add(movimiento);
                 _context.SaveChanges();
 
-                // Devolver el objeto Movimiento como respuesta
                 return Json(movimiento);
             }
             catch (DbUpdateException ex)
             {
-                // En caso de error al guardar en la base de datos
                 return BadRequest(new
                 {
                     error = ex.InnerException?.Message ?? ex.Message
@@ -97,7 +124,6 @@ namespace DevExpressSqlserver.Controllers
             }
             catch (Exception ex)
             {
-                // En caso de cualquier otro error
                 return BadRequest(new
                 {
                     error = ex.Message
