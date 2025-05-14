@@ -19,7 +19,7 @@ Podra regresar al menu una vez haya creado su cuenta y podra acceder con las cre
 ![image](https://github.com/user-attachments/assets/315b017e-10e7-4c9e-b26e-a204f5006b50)
 # Movimientos/Presupuestos
 ![image](https://github.com/user-attachments/assets/03bc4634-731a-49c4-bc7d-92f574a067bf)
-# Movimientos/Registro gastos o Depositos- en caso que sea un gasto y tenga saldo suficiente lo realiza sino aparecera un error y te dira cual es el disponible; si es una consignacion aumentara el saldo dle fondo correspondiente
+# Movimientos/Registro gastos o Depositos- en caso que sea un gasto y tenga saldo suficiente lo realiza y disminuye el saldo del fondo sino aparecera un error y te dira cual es el disponible; si es una consignacion aumentara el saldo del fondo correspondiente
 ![image](https://github.com/user-attachments/assets/3eb75492-ba8b-4a5c-804b-5701f0eadf40)
 ![image](https://github.com/user-attachments/assets/c567dca4-7eeb-4096-8b51-12f6119cf992)
 # Movimientos/Detalle Movimientos
