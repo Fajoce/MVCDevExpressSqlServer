@@ -15,7 +15,7 @@ namespace DevExpressSqlserver.Controllers
 
         public UsuariosController(SBERPDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
         /// <summary>
         /// 

@@ -6,6 +6,7 @@ using DevExtreme.AspNet.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
 namespace DevExpressSqlserver.Controllers
@@ -16,7 +17,7 @@ namespace DevExpressSqlserver.Controllers
 
         public TiposGastosController(SBERPDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         /// <summary>

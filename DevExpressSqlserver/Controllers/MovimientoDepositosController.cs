@@ -17,7 +17,7 @@ namespace DevExpressSqlserver.Controllers
 
         public MovimientoDepositosController(SBERPDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public IActionResult Index()

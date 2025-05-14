@@ -15,6 +15,22 @@ namespace DevExpressSqlserver.Infraestructure.Conexion
         public DbSet<Presupuesto> Presupuestos { get; set; }
         public DbSet<FondosMonetarios> FondosMonetarios { get; set; }
         public DbSet<DetalleMovimiento> DetalleMovimientos { get; set; }
-   
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Usuario>()
+                .HasIndex(u => u.Login)
+                .IsUnique();
+
+            modelBuilder.Entity<Presupuesto>()
+                .HasOne(p => p.Usuario)
+                .WithMany()
+                .HasForeignKey(p => p.UsuarioID)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
+
     }
 }

@@ -18,8 +18,8 @@ namespace DevExpressSqlserver.Controllers
 
         public FondoMonetarioController(SBERPDbContext context, FondosMonetariosValidator validator )
         {
-            _context = context;
-            _validator = validator;
+            _context = context ?? throw new ArgumentNullException(nameof(context)); ;
+            _validator = validator ?? throw new ArgumentNullException(nameof(validator)); ;
         }
         [Authorize]
         public IActionResult Index()
