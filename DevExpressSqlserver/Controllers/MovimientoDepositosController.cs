@@ -70,10 +70,6 @@ namespace DevExpressSqlserver.Controllers
                 // Asignar el ID del usuario al movimiento
                 movimiento.UsuarioId = int.Parse(usuarioIdClaim);
 
-
-                // Se puede agregar lógica adicional si se necesita, como asignar el TipoMovimiento o algún otro valor
-                // Por ejemplo, movimiento.TipoMovimiento = "Deposito";
-
                 // Añadir el nuevo movimiento a la base de datos
                 _context.DetalleMovimientos.Add(movimiento);
                 _context.SaveChanges();
@@ -131,9 +127,6 @@ namespace DevExpressSqlserver.Controllers
 
                 // Asignar el ID del usuario al movimiento (esto es útil si el usuario tiene permisos específicos)
                // movimiento.UsuarioID = int.Parse(usuarioIdClaim);
-
-                // Aquí se pueden agregar validaciones adicionales, como asegurarse de que el usuario tenga acceso
-                // para modificar este movimiento si es necesario
 
                 // Actualizar el movimiento en la base de datos
                 _context.Entry(movimiento).CurrentValues.SetValues(movimiento);
