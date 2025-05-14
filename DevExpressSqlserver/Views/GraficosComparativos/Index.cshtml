@@ -1,0 +1,241 @@
+﻿@{
+    ViewData["Title"] = "Graficos Comparativos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Filtros de fecha y controles -->
+<div class="row mb-3">
+    <div class="col-md-3">
+        <label>Fecha Inicio:</label>
+        @(Html.DevExtreme().DateBox()
+            .ID("fechaInicio")
+            .Type(DateBoxType.Date)
+            .Value(DateTime.Now.AddMonths(-1))
+            )
+    </div>
+    <div class="col-md-3">
+        <label>Fecha Fin:</label>
+        @(Html.DevExtreme().DateBox()
+            .ID("fechaFin")
+            .Type(DateBoxType.Date)
+            .Value(DateTime.Now)
+            )
+    </div>
+    <div class="col-md-2 align-self-end">
+        @(Html.DevExtreme().Button()
+            .Text("Filtrar")
+            .OnClick("filtrarMovimientos")
+            )
+    </div>
+  
+@*     <div class="col-md-2 align-self-end">
+        @(Html.DevExtreme().Button()
+            .Text("Exportar Excel")
+            .Type(ButtonType.Default)
+            .OnClick("exportarExcel")
+            )
+    </div> *@
+    <div class="col-md-2 align-self-end">
+        @(Html.DevExtreme().Button()
+            .Text("Exportar PDF")
+            .Type(ButtonType.Default)
+            .OnClick("exportarPDF")
+            )
+    </div>
+
+    <div class="col-md-3 mt-3">
+        <label>Tipo de Gráfico:</label>
+        @(Html.DevExtreme().SelectBox()
+            .ID("tipoGrafico")
+            .Items(new[] { "bar", "line", "area", "pie", "doughnut" })
+            .Value("bar")
+            .Placeholder("Selecciona tipo de gráfico")
+            .OnValueChanged("mostrarGrafico")
+            )
+    </div>
+    <div class="col-md-2 align-self-end">
+        @(Html.DevExtreme().Button()
+            .Text("Ver Gráfico")
+            .OnClick("mostrarGrafico")
+            )
+    </div>
+</div>
+
+<!-- Grilla de movimientos -->
+<div id="gridMovimientos"></div>
+
+<!-- Gráfico DevExtreme -->
+<div class="mt-4" style="height: 400px;">
+    @(Html.DevExtreme().Chart()
+        .ID("chartMovimientos")
+        .Title(t => t.Text("Totales por Tipo de Movimiento"))
+        .CommonSeriesSettings(s => s
+        .ArgumentField("TipoMovimiento")
+        .Type(SeriesType.Bar)
+        )
+        .Series(s => s.Add().ValueField("Total").Name("Total"))
+        .Legend(l => l.Visible(false))
+        )
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+    async function exportarPDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'pt', 'a4');
+        let y = 20;
+
+        // Capturar gráfico
+        const chartCanvas = await html2canvas(document.querySelector("#chartMovimientos"));
+        const chartImgData = chartCanvas.toDataURL("image/png");
+
+        doc.setFontSize(16);
+        doc.text("Gráfico de Movimientos", 40, y);
+        y += 10;
+        doc.addImage(chartImgData, 'PNG', 40, y + 10, 500, 250);
+        y += 270;
+
+        // Capturar grilla
+        const gridCanvas = await html2canvas(document.querySelector("#gridMovimientos"));
+        const gridImgData = gridCanvas.toDataURL("image/png");
+
+        doc.addPage();
+        doc.setFontSize(16);
+        doc.text("Tabla de Movimientos", 40, 40);
+        doc.addImage(gridImgData, 'PNG', 40, 60, 500, 300);
+
+        doc.save("Movimientos.pdf");
+    }
+    </script>
+    
+    <script>
+        function getFechaInicio() {
+            return $("#fechaInicio").dxDateBox("instance").option("value");
+        }
+
+        function getFechaFin() {
+            return $("#fechaFin").dxDateBox("instance").option("value");
+        }
+
+        function filtrarMovimientos() {
+            const fechaInicio = getFechaInicio();
+            const fechaFin = getFechaFin();
+
+            const valores = JSON.stringify({
+                fechaInicio: fechaInicio,
+                fechaFin: fechaFin
+            });
+
+            const grid = $("#gridMovimientos").dxDataGrid("instance");
+
+            grid.option("dataSource", DevExpress.data.AspNet.createStore({
+                key: "MovimientoID",
+                loadUrl: "/GraficosComparativos/Get",
+                loadParams: { values: valores }
+            }));
+
+            grid.refresh();
+        }
+
+        // function exportarExcel() {
+        //     const fechaInicio = getFechaInicio();
+        //     const fechaFin = getFechaFin();
+
+        //     const query = $.param({
+        //         fechaInicio: fechaInicio?.toISOString(),
+        //         fechaFin: fechaFin?.toISOString()
+        //     });
+
+        //     window.location.href = `/GraficosComparativos/ExportarExcel?${query}`;
+        // }
+
+        function mostrarGrafico() {
+            const fechaInicio = getFechaInicio();
+            const fechaFin = getFechaFin();
+            const tipoGrafico = $("#tipoGrafico").dxSelectBox("instance").option("value");
+
+            const valores = JSON.stringify({
+                fechaInicio: fechaInicio,
+                fechaFin: fechaFin
+            });
+
+            $.get("/GraficosComparativos/GetGrafico", { values: valores }, function (data) {
+                const chart = $("#chartMovimientos").dxChart("instance");
+
+                if (tipoGrafico === "pie" || tipoGrafico === "doughnut") {
+                    chart.option({
+                        dataSource: data,
+                        series: {
+                            argumentField: "TipoMovimiento",
+                            valueField: "Total",
+                            type: tipoGrafico
+                        },
+                        commonSeriesSettings: null,
+                        legend: { visible: true },
+                        title: "Totales por Tipo de Movimiento"
+                    });
+                } else {
+                    chart.option({
+                        dataSource: data,
+                        commonSeriesSettings: {
+                            argumentField: "TipoMovimiento",
+                            type: tipoGrafico
+                        },
+                        series: [
+                            {
+                                valueField: "Total",
+                                name: "Total"
+                            }
+                        ],
+                        legend: { visible: false },
+                        title: "Totales por Tipo de Movimiento"
+                    });
+                }
+            });
+        }
+
+        $(function () {
+            const valoresIniciales = JSON.stringify({
+                fechaInicio: getFechaInicio(),
+                fechaFin: getFechaFin()
+            });
+
+            $("#gridMovimientos").dxDataGrid({
+                dataSource: DevExpress.data.AspNet.createStore({
+                    key: "MovimientoID",
+                    loadUrl: "/GraficosComparativos/Get",
+                    loadParams: { values: valoresIniciales }
+                }),
+                remoteOperations: true,
+                columns: [
+                    { dataField: "MovimientoID", caption: "ID" },
+                    { dataField: "Fecha", caption: "Fecha", dataType: "date", format: "dd/MM/yyyy" },
+                    { dataField: "FondoNombre", caption: "Fondo" },
+                    { dataField: "TipoMovimiento", caption: "Tipo Movimiento" },
+                    { dataField: "Monto", caption: "Monto", dataType: "number", format: "currency" },
+                    { dataField: "NombreComercio", caption: "Comercio" },
+                    { dataField: "TipoDocumento", caption: "Documento" },
+                    { dataField: "Observaciones", caption: "Observaciones" },
+                    { dataField: "UsuarioNombre", caption: "Usuario" }
+                ],
+                paging: {
+                    pageSize: 10
+                },
+                pager: {
+                    showPageSizeSelector: true,
+                    allowedPageSizes: [10, 20, 50],
+                    showInfo: true
+                },
+                filterRow: { visible: true },
+                searchPanel: { visible: true },
+                headerFilter: { visible: true },
+                columnAutoWidth: true,
+                rowAlternationEnabled: true
+            });
+        });
+    </script>
+}

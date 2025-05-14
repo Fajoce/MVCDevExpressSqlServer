@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "Mis Movimientos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<!-- Filtros de fecha -->
+<div class="row mb-3">
+    <div class="col-md-3">
+        <label>Fecha Inicio:</label>
+        @(Html.DevExtreme().DateBox()
+            .ID("fechaInicio")
+            .Type(DateBoxType.Date)
+            .Value(DateTime.Now.AddMonths(-1))
+            )
+    </div>
+    <div class="col-md-3">
+        <label>Fecha Fin:</label>
+        @(Html.DevExtreme().DateBox()
+            .ID("fechaFin")
+            .Type(DateBoxType.Date)
+            .Value(DateTime.Now)
+            )
+    </div>
+    <div class="col-md-2 align-self-end">
+        @(Html.DevExtreme().Button()
+            .Text("Filtrar")
+            .OnClick("filtrarMovimientos")
+            )
+    </div>
+    <div class="col-md-2 align-self-end">
+        @(Html.DevExtreme().Button()
+            .Text("Exportar Excel")
+            .Type(ButtonType.Default)
+            .OnClick("exportarExcel")
+            )
+    </div>
+</div>
+
+<!-- Grilla DevExtreme -->
+<div id="gridMovimientos"></div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <script>
+        function getFechaInicio() {
+            return $("#fechaInicio").dxDateBox("instance").option("value");
+        }
+
+        function getFechaFin() {
+            return $("#fechaFin").dxDateBox("instance").option("value");
+        }
+
+        function filtrarMovimientos() {
+            const fechaInicio = getFechaInicio();
+            const fechaFin = getFechaFin();
+
+            const valores = JSON.stringify({
+                fechaInicio: fechaInicio,
+                fechaFin: fechaFin
+            });
+
+            const grid = $("#gridMovimientos").dxDataGrid("instance");
+
+            grid.option("dataSource", DevExpress.data.AspNet.createStore({
+                key: "MovimientoID",
+                loadUrl: "/FiltrosMovimientos/Get",
+                loadParams: { values: valores }
+            }));
+
+            grid.refresh();
+        }
+
+        function exportarExcel() {
+            const fechaInicio = getFechaInicio();
+            const fechaFin = getFechaFin();
+
+            const query = $.param({
+                fechaInicio: fechaInicio?.toISOString(),
+                fechaFin: fechaFin?.toISOString()
+            });
+
+            window.location.href = `/FiltrosMovimientos/ExportarExcel?${query}`;
+        }
+
+        $(function () {
+            const valoresIniciales = JSON.stringify({
+                fechaInicio: getFechaInicio(),
+                fechaFin: getFechaFin()
+            });
+
+            $("#gridMovimientos").dxDataGrid({
+                dataSource: DevExpress.data.AspNet.createStore({
+                    key: "MovimientoID",
+                    loadUrl: "/FiltrosMovimientos/Get",
+                    loadParams: { values: valoresIniciales }
+                }),
+                remoteOperations: true,
+                columns: [
+                    { dataField: "MovimientoID", caption: "ID" },
+                    { dataField: "Fecha", caption: "Fecha", dataType: "date", format: "dd/MM/yyyy" },
+                    { dataField: "FondoNombre", caption: "Fondo" },
+                    { dataField: "TipoMovimiento", caption: "Tipo Movimiento" },
+                    { dataField: "Monto", caption: "Monto", dataType: "number", format: "currency" },
+                    { dataField: "NombreComercio", caption: "Comercio" },
+                    { dataField: "TipoDocumento", caption: "Documento" },
+                    { dataField: "Observaciones", caption: "Observaciones" },
+                    { dataField: "UsuarioNombre", caption: "Usuario" }
+                ],
+                paging: {
+                    pageSize: 10
+                },
+                pager: {
+                    showPageSizeSelector: true,
+                    allowedPageSizes: [10, 20, 50],
+                    showInfo: true
+                },
+                filterRow: { visible: true },
+                searchPanel: { visible: true },
+                headerFilter: { visible: true },
+                columnAutoWidth: true,
+                rowAlternationEnabled: true
+            });
+        });
+    </script>
+}

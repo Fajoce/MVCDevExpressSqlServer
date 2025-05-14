@@ -1,0 +1,150 @@
+﻿@model IEnumerable<DevExpressSqlserver.Models.Entities.FondosMonetarios>
+
+@{
+    ViewData["Title"] = "Tipos de Fondos Monetarios";
+}
+
+<!-- Estilos DevExtreme y Bootstrap -->
+<link href="https://cdn3.devexpress.com/jslib/latest/css/dx.light.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    #tiposGastosGrid {
+        font-size: 14px;
+        background-color: #ffffff;
+    }
+
+    .dx-datagrid-headers {
+        background: linear-gradient(90deg, #007acc, #005999);
+        color: white;
+        font-weight: bold;
+    }
+
+    .dx-popup-title {
+        background-color: #007acc;
+        color: white;
+        font-weight: bold;
+    }
+
+    .dx-link.dx-link-add {
+        color: green !important;
+        font-weight: bold;
+    }
+
+    .dx-link.dx-link-edit {
+        color: dodgerblue !important;
+    }
+
+    .dx-link.dx-link-delete {
+        color: crimson !important;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container mt-4">
+    <h4><i class="fas fa-receipt"></i> Fondos Monetarios</h4>
+
+    @(
+        Html.DevExtreme().DataGrid()
+        .ID("tiposGastosGrid")
+        .DataSource(ds => ds
+        .Mvc()
+        .Controller("FondoMonetario")
+        .LoadAction("GetData")
+        .InsertAction("AddNew")
+        .UpdateAction("Update")
+        .DeleteAction("Delete")
+        .Key("FondoID")
+
+        )
+        .Editing(editing => editing
+        .Mode(GridEditMode.Popup)
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+        .Popup(p => p
+        .Title("📝 Crear / Editar Tipo de Fondos Monetarios")
+        .ShowTitle(true)
+        .Width(400)
+        .Height("auto")
+        )
+        .Form(f => f
+        .ColCount(1)
+        .Items(items =>
+        {
+            items.AddGroup()
+            .Caption("Información")
+            .ColCount(1)
+            .Items(groupItems =>
+            {
+                groupItems.AddSimple()
+            .DataField("Descripcion")
+            .Editor(e => e.TextBox())
+            .Label(l => l.Text("Descripcion"));
+                groupItems.AddSimple()
+            .DataField("Saldo")
+            .Editor(e => e.TextBox())
+            .Label(l => l.Text("Saldo"));
+            });
+        })
+        )
+        )
+        .ShowBorders(true)
+        .Paging(p => p.PageSize(10))
+        .Pager(pager => pager
+        .ShowPageSizeSelector(true)
+        .AllowedPageSizes(new[] { 5, 10, 20 })
+        .ShowNavigationButtons(true)
+        .ShowInfo(true)
+        )
+        .FilterRow(f => f.Visible(true))
+        .HeaderFilter(f => f.Visible(true))
+        .Export(export => export
+        .Enabled(true)
+        .AllowExportSelectedData(false)
+        )
+        .Columns(columns =>
+        {
+            columns.Add().DataField("FondoId").Caption("ID").AllowEditing(false);
+            columns.Add().DataField("Descripcion").Caption("Descripción");
+            columns.Add().DataField("Saldo").Caption("Saldo");
+
+            columns.Add().Type(GridCommandColumnType.Buttons).Buttons(b =>
+            {
+                b.Add().Name(GridColumnButtonName.Edit);
+                b.Add().Name(GridColumnButtonName.Delete);
+            });
+        })
+        )
+</div>
+
+@section Scripts {
+    <script src="https://cdn3.devexpress.com/jslib/latest/js/jquery.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/latest/js/jszip.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/latest/js/dx.all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#tiposGastosGrid").dxDataGrid("instance").option("onExporting", function (e) {
+                const workbook = new ExcelJS.Workbook();
+                const worksheet = workbook.addWorksheet("Tipos de Gastos");
+
+                DevExpress.excelExporter.exportDataGrid({
+                    component: e.component,
+                    worksheet: worksheet
+                }).then(function () {
+                    workbook.xlsx.writeBuffer().then(function (buffer) {
+                        const blob = new Blob([buffer], { type: "application/octet-stream" });
+                        saveAs(blob, "TiposDeGastos.xlsx");
+                    });
+                });
+
+                e.cancel = true;
+            });
+        });
+    </script>
+}
+

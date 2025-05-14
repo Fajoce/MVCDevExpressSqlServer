@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Registro de Gastos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+@(Html.DevExtreme().DataGrid()
+    .ID("gridMovimientos")
+    .DataSource(ds => ds.Mvc()
+        .Controller("MovimientoRegistroDeGastos")
+        .LoadAction("Get")
+        .InsertAction("Post")
+        .UpdateAction("Put")
+        .DeleteAction("Delete")
+        .Key("MovimientoID")
+    )
+    .Columns(columns =>
+    {
+        columns.Add().DataField("MovimientoID")
+            .Caption("ID")
+            .AllowEditing(false);
+
+        columns.Add().DataField("Fecha")
+            .Caption("Fecha")
+            .DataType(GridColumnDataType.Date);
+
+        columns.Add().DataField("FondoID")
+            .Caption("Fondo")
+            .Lookup(lookup => lookup
+                .DataSource(ds => ds.Mvc()
+                    .Controller("MovimientoRegistroDeGastos")
+                    .LoadAction("GetFondos"))
+                .ValueExpr("FondoID")
+                .DisplayExpr("Descripcion")
+            );
+
+        columns.Add().DataField("TipoMovimiento")
+            .Caption("Tipo Movimiento");
+
+        columns.Add().DataField("Monto")
+            .Caption("Monto")
+            .DataType(GridColumnDataType.Number)
+            .Format("currency");
+
+        columns.Add().DataField("NombreComercio")
+            .Caption("Comercio");
+
+        columns.Add().DataField("TipoDocumento")
+            .Caption("Documento");
+
+        columns.Add().DataField("Observaciones")
+            .Caption("Observaciones");
+
+        columns.Add().DataField("UsuarioNombre")
+            .Caption("Usuario")
+            .AllowEditing(false);
+    })
+    .Editing(editing => editing
+        .Mode(GridEditMode.Popup)
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+        .Popup(p => p
+            .Title("Movimiento")
+            .ShowTitle(true)
+            .Width(600)
+            .Height(500)
+        )
+        .Form(f => f.Items(items =>
+        {
+            items.AddGroup().ColCount(1).Items(group =>
+            {
+                group.AddSimple().DataField("Fecha");
+                group.AddSimple().DataField("FondoID");
+                group.AddSimple().DataField("TipoMovimiento")
+      .Editor(f => f.SelectBox()
+          .DataSource(new[] { "Deposito", "Gasto" })
+          .Value("Depósito") // valor por defecto opcional
+      );
+                group.AddSimple().DataField("Monto");
+                group.AddSimple().DataField("NombreComercio");
+                group.AddSimple().DataField("TipoDocumento")
+     .Editor(f => f.SelectBox()
+          .DataSource(new[] { "Comprobante", "Factura", "Otro" })
+          .Value("Comprobante") // valor por defecto opcional
+      );
+                group.AddSimple().DataField("Observaciones");
+            });
+        }))
+    )
+    .Paging(p => p.PageSize(10))
+    .Pager(p => p
+        .ShowPageSizeSelector(true)
+        .AllowedPageSizes(new[] { 10, 20, 50 })
+        .ShowInfo(true)
+    )
+    .FilterRow(f => f.Visible(true))
+    .SearchPanel(s => s.Visible(true))
+    .HeaderFilter(h => h.Visible(true))
+    .ColumnAutoWidth(true)
+)

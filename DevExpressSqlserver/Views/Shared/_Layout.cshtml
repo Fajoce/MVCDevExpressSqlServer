@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Title"] - DevExpressSqlserver</title>
+
+    <link href="~/css/devextreme/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/devextreme/dx.light.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/Site.css" />
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <script src="~/js/devextreme/jquery.js"></script>
+    <script src="~/js/devextreme/bootstrap.js"></script>
+    <script src="~/js/devextreme/dx.all.js"></script>
+    <script src="~/js/devextreme/aspnet/dx.aspnet.mvc.js"></script>
+    <script src="~/js/devextreme/aspnet/dx.aspnet.data.js"></script>
+
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            background-color: aliceblue;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #212529;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            padding-top: 1rem;
+            overflow-y: auto; /* Habilitar barra de desplazamiento vertical */
+        }
+
+            .sidebar h5 {
+                text-align: center;
+                margin-bottom: 1rem;
+                font-weight: bold;
+            }
+
+            .sidebar a {
+                color: #adb5bd;
+                padding: 12px 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+                .sidebar a:hover {
+                    background-color: #343a40;
+                    color: #fff;
+                }
+
+                .sidebar a.active {
+                    background-color: #495057;
+                    color: #fff;
+                }
+
+        .main-content {
+            margin-left: 240px;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        .bi {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="sidebar">
+            <h5>Mantenimiento</h5>
+            <hr />
+            <a href="/TiposGastos/Index"><i class="bi bi-tags"></i> Tipos Gastos</a>
+            <a href="/Usuarios/EditarPerfil"><i class="bi bi-person-circle"></i> Editar Perfil</a>
+            <a href="/FondoMonetario/Index"><i class="bi bi-wallet2"></i> Fondos Monetarios</a>
+            <h5>Movimientos</h5>
+            <hr />
+            <a href="/Presupuesto/Index"><i class="bi bi-cash-stack"></i> Presupuesto</a>
+            <a href="/MovimientoRegistroDeGastos/Index"><i class="bi bi-journal-text"></i> Registro Gastos/Depositos</a>
+            <a href="/MovimientoDepositos/Index"><i class="bi bi-bank"></i> Detalle Movimiento</a>
+            <h5>Consultas</h5>
+            <a href="/FiltrosMovimientos/Index"><i class="bi bi-bank"></i> Consultar Movimiento</a>
+            <a href="/GraficosComparativos/Index"><i class="bi bi-bank"></i> Gráficos comparativos</a>
+
+            <hr />
+            <a href="/Home/Index"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        </div>
+    }
+
+    <div class="main-content">
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

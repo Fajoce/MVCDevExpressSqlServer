@@ -1,0 +1,140 @@
+﻿@model IEnumerable<DevExpressSqlserver.Models.Entities.TipoGasto>
+
+@{
+    ViewData["Title"] = "Tipos de Gastos";
+}
+
+<div class="container mt-4">
+    <h2><i class="fas fa-receipt"></i> Tipos de Gastos</h2>
+
+    @(Html.DevExtreme().DataGrid()
+        .ID("tiposGastosGrid")
+        .DataSource(ds => ds
+        .Mvc()
+        .Controller("TiposGastos")
+        .LoadAction("GetData")
+        .InsertAction("AddNew")
+        .UpdateAction("Update")
+        .DeleteAction("Delete")
+        .Key("TipoGastoID")
+        )
+        .Editing(editing => editing
+        .Mode(GridEditMode.Popup)
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+        .Popup(p => p
+        .Title("📝 Crear / Editar Tipo de Gasto")
+        .ShowTitle(true)
+        .Width(400)
+        .Height("auto")
+        )
+        .Form(f => f
+        .ColCount(1)
+        .Items(items =>
+        {
+            items.AddGroup()
+            .Caption("Información")
+            .ColCount(1)
+            .Items(groupItems =>
+            {
+                groupItems.AddSimple()
+            .DataField("Descripcion")
+            .Editor(e => e.TextBox())
+            .Label(l => l.Text("Descripción"));
+            });
+        })
+        )
+        )
+        .ShowBorders(true)
+        .Paging(p => p.PageSize(10))
+        .Pager(pager => pager
+        .ShowPageSizeSelector(true)
+        .AllowedPageSizes(new[] { 5, 10, 20 })
+        .ShowNavigationButtons(true)
+        .ShowInfo(true)
+        )
+        .FilterRow(f => f.Visible(true))
+        .HeaderFilter(f => f.Visible(true))
+        .Export(export => export
+        .Enabled(true)
+        .AllowExportSelectedData(false)
+        )
+        .Columns(columns =>
+        {
+            columns.Add().DataField("TipoGastoID").Caption("ID").AllowEditing(false);
+            columns.Add().DataField("Descripcion").Caption("Descripción");
+
+            columns.Add().Type(GridCommandColumnType.Buttons).Buttons(b =>
+            {
+                b.Add().Name(GridColumnButtonName.Edit)
+            .CssClass("btn-edit")
+            .Hint("Editar")
+            .Icon("edit"); // Ícono DevExtreme
+
+                b.Add().Name(GridColumnButtonName.Delete)
+            .CssClass("btn-delete")
+            .Hint("Eliminar")
+            .Icon("trash"); // Ícono DevExtreme
+            });
+        })
+        )
+</div>
+
+<style>
+    .dx-link.btn-edit {
+        color: #007bff;
+        font-weight: bold;
+    }
+
+        .dx-link.btn-edit:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+    .dx-link.btn-delete {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+        .dx-link.btn-delete:hover {
+            color: #a71d2a;
+            text-decoration: underline;
+        }
+</style>
+
+@section Scripts {
+    <script>
+        DevExpress.config({
+            serverDecimalSeparator: ","
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.3.0/exceljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script>
+        $(function () {
+            const grid = $("#tiposGastosGrid").dxDataGrid("instance");
+
+            if (grid) {
+                grid.option("onExporting", function (e) {
+                    const workbook = new ExcelJS.Workbook();
+                    const worksheet = workbook.addWorksheet("Tipos de Gastos");
+
+                    DevExpress.excelExporter.exportDataGrid({
+                        component: e.component,
+                        worksheet: worksheet
+                    }).then(function () {
+                        workbook.xlsx.writeBuffer().then(function (buffer) {
+                            const blob = new Blob([buffer], { type: "application/octet-stream" });
+                            saveAs(blob, "TiposDeGastos.xlsx");
+                        });
+                    });
+
+                    e.cancel = true;
+                });
+            }
+        });
+    </script>
+}

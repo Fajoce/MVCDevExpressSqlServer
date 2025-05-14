@@ -1,0 +1,86 @@
+﻿@model IEnumerable<DevExpressSqlserver.Models.Entities.Presupuesto>
+@using DevExtreme.AspNet.Mvc
+@using DevExtreme.AspNet.Mvc.Builders
+@{
+    ViewData["Title"] = "Presupuestos";
+}
+
+<link href="https://cdn3.devexpress.com/jslib/23.2.4/css/dx.light.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <h4 class="mb-4">📊 Presupuestos del Usuario</h4>
+
+    @(Html.DevExtreme().DataGrid<DevExpressSqlserver.Models.Entities.Presupuesto>()
+        .ID("presupuestoGrid")
+        .DataSource(ds => ds
+        .Mvc()
+        .Controller("Presupuesto")
+        .LoadAction("GetData")
+        .InsertAction("Insert")
+        .UpdateAction("Update")
+        .DeleteAction("Delete")
+        .Key("PresupuestoID")
+        )
+        
+        .ShowBorders(true)
+        .Paging(p => p.PageSize(10))
+        .Pager(p => p
+        .ShowPageSizeSelector(true)
+        .AllowedPageSizes(new[] { 5, 10, 20 })
+        .ShowNavigationButtons(true)
+        .ShowInfo(true)
+        )
+        .Editing(editing => editing
+        .Mode(GridEditMode.Popup)
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+        .Popup(popup => popup
+        .Title("Gestionar Presupuesto")
+        .ShowTitle(true)
+        .Width(500)
+        .Height("auto")
+        )
+        .Form(f => f
+        .ColCount(1)
+        .Items(items =>
+        {
+            items.AddSimple().DataField("Mes").Editor(e => e.TextBox()).Label(l => l.Text("Mes (MM-dd-yyyy)"));
+        items.AddSimple().DataField("Monto").Editor(e => e.NumberBox()).Label(l => l.Text("Monto"));
+
+        // 👇 Aquí el SelectBox correctamente configurado
+        items.AddSimple().DataField("TipoGastoID").Editor(e => e.SelectBox()
+            .DataSource(ds => ds.Mvc()
+                .Controller("Presupuesto")
+            .LoadAction("GetTiposGasto"))
+            .DisplayExpr("Descripcion")
+            .ValueExpr("TipoGastoID")
+            .Placeholder("Seleccione un tipo de gasto")
+            .SearchEnabled(true)
+        ).Label(l => l.Text("Tipo de Gasto"));
+        })
+        )
+        )
+        .Columns(columns =>
+        {
+            columns.AddFor(m => m.PresupuestoID).Caption("ID").AllowEditing(false);
+            columns.AddFor(m => m.Mes);
+            columns.AddFor(m => m.TipoGastoID);
+            columns.AddFor(m => m.Monto).Format(Format.Currency);
+            columns.Add().DataField("NombreGasto").Caption("Nombre de Gasto").AllowEditing(false);
+            columns.Add().Type(GridCommandColumnType.Buttons).Buttons(b =>
+            {
+                b.Add().Name(GridColumnButtonName.Edit);
+                b.Add().Name(GridColumnButtonName.Delete);
+            });
+        })
+        )
+</div>
+
+@section Scripts {
+    <script src="https://cdn3.devexpress.com/jslib/23.2.4/js/jquery.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/23.2.4/js/jszip.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/23.2.4/js/dx.all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+}

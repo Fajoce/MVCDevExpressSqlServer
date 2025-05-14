@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Movimientos - Depósitos";
+}
+
+<h2>Registro de Depósitos</h2>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+@(Html.DevExtreme().DataGrid()
+    .ID("gridDepositos")
+    .DataSource(ds => ds.Mvc()
+        .Controller("MovimientoDepositos")
+        .LoadAction("Get")
+        .InsertAction("Post")
+        .UpdateAction("Put")
+        .DeleteAction("Delete")
+        .Key("DetalleID")
+    )
+    .Columns(columns =>
+    {
+        columns.Add().DataField("DetalleID")
+            .Caption("ID")
+            .AllowEditing(false);
+
+        columns.Add().DataField("MovimientoID")
+            .Caption("Movimiento ID")
+            .DataType(GridColumnDataType.Number);
+
+        columns.Add().DataField("TipoGastoID")
+            .Caption("Tipo de Gasto")
+            .Lookup(lookup => lookup
+                .DataSource(ds => ds.Mvc()
+                    .Controller("MovimientoDepositos")
+                    .LoadAction("GetTiposGasto"))
+                .ValueExpr("TipoGastoID")
+                .DisplayExpr("Descripcion")
+            );
+        columns.Add().DataField("TipoGastoID");
+        columns.Add().DataField("Monto")
+            .Caption("Monto")
+          //  columns.Add().DataField("NombreGasto").Caption("Nombre de Gasto").AllowEditing(false)
+            .DataType(GridColumnDataType.Number)
+            .Format("currency");
+    })
+    .Editing(editing =>
+    {
+        editing.Mode(GridEditMode.Popup)
+            .AllowAdding(true)
+            .AllowUpdating(true)
+            .AllowDeleting(true)
+            .Popup(p => p
+                .Title("Editar Depósito")
+                .ShowTitle(true)
+                .Width(500)
+                .Height(400)
+            )
+            .Form(f => f.Items(items =>
+            {
+                items.AddGroup().ColCount(1).Items(group =>
+                {
+                    group.AddSimple().DataField("MovimientoID");
+                    group.AddSimple().DataField("TipoGastoID");
+                    group.AddSimple().DataField("Monto");
+                });
+            }));
+    })
+    .Paging(p => p.PageSize(10))
+    .Pager(p => p
+        .ShowPageSizeSelector(true)
+        .AllowedPageSizes(new[] { 10, 20, 50 })
+    )
+    .SearchPanel(s => s.Visible(true))
+    .FilterRow(f => f.Visible(true))
+    .HeaderFilter(h => h.Visible(true))
+    .ColumnAutoWidth(true)
+    .ShowBorders(true)
+)
