@@ -1,0 +1,7 @@
+C:\Users\USER\source\repos\MiFirstDevExpressProject\TestProject\bin\Debug\net8.0\CoverletSourceRootsMapping_TestProject
+C:\Users\USER\source\repos\MiFirstDevExpressProject\TestProject\obj\Debug\net8.0\TestProject.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\MiFirstDevExpressProject\TestProject\obj\Debug\net8.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\MiFirstDevExpressProject\TestProject\obj\Debug\net8.0\TestProject.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\MiFirstDevExpressProject\TestProject\obj\Debug\net8.0\TestProject.AssemblyInfo.cs
+C:\Users\USER\source\repos\MiFirstDevExpressProject\TestProject\obj\Debug\net8.0\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\MiFirstDevExpressProject\TestProject\obj\Debug\net8.0\TestProject.sourcelink.json

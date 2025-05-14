@@ -9,6 +9,8 @@ C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debu
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DevExpressSqlserver.pdb
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\ClosedXML.Parser.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DevExpress.AspNetCore.Common.v24.2.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DevExpress.AspNetCore.Core.v24.2.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DevExpress.AspNetCore.Reporting.v24.2.dll
@@ -35,6 +37,9 @@ C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debu
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DevExpress.Xpo.v24.2.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DevExtreme.AspNet.Core.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DevExtreme.AspNet.Data.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\ExcelNumberFormat.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\Humanizer.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -100,6 +105,8 @@ C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debu
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\NuGet.ProjectModel.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\NuGet.Protocol.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\NuGet.Versioning.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\RBush.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.Composition.AttributedModel.dll
@@ -116,6 +123,7 @@ C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debu
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.Formats.Asn1.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.IO.Packaging.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.IO.Pipelines.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
@@ -361,6 +369,7 @@ C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debu
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\DevExpressSqlserver.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\DevExpressSqlserver.RazorAssemblyInfo.cache
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\DevExpressSqlserver.RazorAssemblyInfo.cs
+C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\DevExpressSqlserver.sourcelink.json
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\scopedcss\bundle\DevExpressSqlserver.styles.css
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\staticwebassets.development.json
@@ -378,12 +387,3 @@ C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debu
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\DevExpressSqlserver.pdb
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\DevExpressSqlserver.genruntimeconfig.cache
 C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\ref\DevExpressSqlserver.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\ClosedXML.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\ClosedXML.Parser.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\ExcelNumberFormat.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\RBush.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\SixLabors.Fonts.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\bin\Debug\net8.0\System.IO.Packaging.dll
-C:\Users\USER\source\repos\MiFirstDevExpressProject\DevExpressSqlserver\obj\Debug\net8.0\DevExpressSqlserver.sourcelink.json

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("SmartBitConexion");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews()
@@ -13,7 +14,7 @@ builder.Services.AddControllersWithViews()
     });
 
 builder.Services.AddDbContext<SBERPDbContext>(options =>
-        options.UseSqlServer("name=ConnectionStrings:SmartBitConexion"));
+    options.UseSqlServer(connectionString));
 builder.Services.AddScoped<FondosMonetariosValidator>();
 builder.Services.AddSession();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -21,7 +22,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Usuarios/Login";
         options.AccessDeniedPath = "/TiposGastos/Index";
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
     });
 
 var app = builder.Build();
