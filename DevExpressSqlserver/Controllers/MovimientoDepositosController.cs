@@ -3,6 +3,7 @@ using DevExpressSqlserver.Models.Entities;
 using DevExpressSqlserver.Models.ModelViews;
 using DevExtreme.AspNet.Data;
 using DevExtreme.AspNet.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -11,6 +12,7 @@ using System.Security.Claims;
 
 namespace DevExpressSqlserver.Controllers
 {
+    [Authorize]
     public class MovimientoDepositosController : Controller
     {
         private readonly SBERPDbContext _context;

@@ -11,6 +11,7 @@ using System.Security.Claims;
 
 namespace DevExpressSqlserver.Controllers
 {
+    [Authorize]
     public class TiposGastosController : Controller
     {
         private readonly SBERPDbContext _context;
