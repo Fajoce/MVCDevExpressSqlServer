@@ -13,6 +13,10 @@ namespace TestProject
 {
     public class UnitTest
     {
+        public void Test()
+        {
+            var loadOptions = new DataSourceLoadOptions();
+        }
         private TiposGastosController CreateControllerWithUser(SBERPDbContext context, int userId)
         {
             var controller = new TiposGastosController(context);
@@ -61,8 +65,8 @@ namespace TestProject
             context.SaveChanges();
 
             var controller = CreateControllerWithUser(context, userId);
-            var loadOptions = new DevExtreme.AspNet.Data.DataSourceLoadOptions();
-
+            //var loadOptions = new DevExtreme.AspNet.Data.DataSourceLoadOptions();
+            var loadOptions = new DataSourceLoadOptions();
             var result = controller.GetData(loadOptions);
 
             var jsonResult = Assert.IsType<JsonResult>(result);

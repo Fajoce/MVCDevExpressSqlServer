@@ -10,8 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="DevExtreme.AspNet.Core" Version="24.2.7" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="DevExtreme.AspNet.Data" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.5" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
