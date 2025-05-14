@@ -162,10 +162,7 @@ namespace DevExpressSqlserver.Controllers
                     return Unauthorized(); // Si no se encuentra el ID del usuario, devolver 401
 
                 // Asignar el ID del usuario al movimiento (esto es útil si el usuario tiene permisos específicos)
-                movimiento.UsuarioID = int.Parse(usuarioIdClaim);
-
-                // Aquí se pueden agregar validaciones adicionales, como asegurarse de que el usuario tenga acceso
-                // para modificar este movimiento si es necesario
+                movimiento.UsuarioID = int.Parse(usuarioIdClaim);               
 
                 // Actualizar el movimiento en la base de datos
                 _context.Entry(movimiento).CurrentValues.SetValues(movimiento);
