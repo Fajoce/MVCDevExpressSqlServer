@@ -17,12 +17,20 @@ namespace DevExpressSqlserver.Controllers
         {
             _context = context;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
@@ -58,6 +66,10 @@ namespace DevExpressSqlserver.Controllers
 
             return View(model);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         // Mostrar formulario de registro
         [HttpGet]
         public IActionResult Register()
@@ -65,6 +77,11 @@ namespace DevExpressSqlserver.Controllers
             return View();
         }
         // Procesar datos del formulario
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Register(RegisterViewModel model)
         {
@@ -98,6 +115,10 @@ namespace DevExpressSqlserver.Controllers
 
             return View(model);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
 
         [Authorize]
         public IActionResult EditarPerfil()
@@ -126,6 +147,11 @@ namespace DevExpressSqlserver.Controllers
 
             return View(model);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         [Authorize]
         public IActionResult EditarPerfil(Usuario model)
@@ -155,6 +181,10 @@ namespace DevExpressSqlserver.Controllers
 
             return View(model);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

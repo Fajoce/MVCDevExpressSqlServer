@@ -1,5 +1,6 @@
 using DevExpress.XtraCharts;
 using DevExpressSqlserver.Infraestructure.Conexion;
+using DevExpressSqlserver.Models.Guards;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,7 @@ builder.Services.AddControllersWithViews()
 
 builder.Services.AddDbContext<SBERPDbContext>(options =>
         options.UseSqlServer("name=ConnectionStrings:SmartBitConexion"));
-
+builder.Services.AddScoped<FondosMonetariosValidator>();
 builder.Services.AddSession();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>

@@ -18,11 +18,22 @@ namespace DevExpressSqlserver.Controllers
         {
             _context = context;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
+        
         public IActionResult Index()
         {
             return View();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loadOptions"></param>
+        /// <returns></returns>
         [HttpGet]
         [Authorize]
         public IActionResult GetData(DataSourceLoadOptions loadOptions)
@@ -42,6 +53,11 @@ namespace DevExpressSqlserver.Controllers
                         };
             return Json(DataSourceLoader.Load(data, loadOptions));
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
 
         [HttpPost]
         public IActionResult AddNew(string values)
@@ -59,7 +75,7 @@ namespace DevExpressSqlserver.Controllers
                 var tipoGasto = new TipoGasto();
                 JsonConvert.PopulateObject(values, tipoGasto);
 
-                //ProductGuard.Validate(product);
+               // FondosMonetariosValidator.Validate(tipoGasto);
                 //if (ProductGuard.IsValid)
                 //{
                 tipoGasto.UsuarioId = userId;
@@ -73,6 +89,12 @@ namespace DevExpressSqlserver.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="values"></param>
+        /// <returns></returns>
 
         [HttpPut]
         public IActionResult Update(int key, string values)

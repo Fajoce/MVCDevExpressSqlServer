@@ -1,10 +1,12 @@
 ﻿using DevExpressSqlserver.Infraestructure.Conexion;
 using DevExpressSqlserver.Models.Entities;
+using DevExpressSqlserver.Models.Guards;
 using DevExtreme.AspNet.Data;
 using DevExtreme.AspNet.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 
 namespace DevExpressSqlserver.Controllers
@@ -12,10 +14,12 @@ namespace DevExpressSqlserver.Controllers
     public class FondoMonetarioController : Controller
     {
         private readonly SBERPDbContext _context;
+        private readonly FondosMonetariosValidator _validator;
 
-        public FondoMonetarioController(SBERPDbContext context)
+        public FondoMonetarioController(SBERPDbContext context, FondosMonetariosValidator validator )
         {
             _context = context;
+            _validator = validator;
         }
         [Authorize]
         public IActionResult Index()
@@ -44,7 +48,7 @@ namespace DevExpressSqlserver.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddNew(string values)
+        public async Task<IActionResult> AddNew(string values)
         {
             var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
@@ -57,9 +61,10 @@ namespace DevExpressSqlserver.Controllers
                 var fm = new FondosMonetarios();
                 JsonConvert.PopulateObject(values, fm);
 
-                // ProductGuard.Validate(product);
-                //if (ProductGuard.IsValid)
-                //{
+                // Validar con el guard
+                var resultado = await _validator.ValidarAsync(fm);
+                if (!resultado.IsValid)
+                    return BadRequest(new { error = resultado.ErrorMessage });
                 fm.UsuarioId = userId;
                 _context.FondosMonetarios.Add(fm);
                 _context.SaveChanges();

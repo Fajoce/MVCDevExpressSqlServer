@@ -3,7 +3,6 @@
     ViewData["Title"] = "Iniciar sesión";
 }
 
-
 <div class="container d-flex align-items-center justify-content-center" style="min-height: 100vh;">
     <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
         <div class="text-center mb-4">
@@ -12,7 +11,7 @@
             <p class="text-muted">Inicia sesión para continuar</p>
         </div>
 
-        <form asp-action="Login" method="post">
+        <form asp-action="Login" method="post" id="loginForm">
             <div class="mb-3">
                 <label asp-for="Login" class="form-label">Usuario</label>
                 <input asp-for="Login" class="form-control" placeholder="Ingrese su usuario" />
@@ -25,7 +24,11 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-primary w-100" id="submitBtn">
+                <span id="btnText">Iniciar Sesión</span>
+                <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+            </button>
+
             <a asp-action="Register" class="btn btn-link w-100 mt-2">¿No tienes cuenta? Crear Usuario</a>
 
             <div asp-validation-summary="All" class="text-danger mt-3 text-center"></div>
@@ -35,5 +38,13 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        // Mostrar spinner al enviar el formulario
+        document.getElementById("loginForm").addEventListener("submit", function () {
+            document.getElementById("submitBtn").disabled = true;
+            document.getElementById("btnText").textContent = "Ingresando...";
+            document.getElementById("spinner").classList.remove("d-none");
+        });
+    </script>
 }
 
