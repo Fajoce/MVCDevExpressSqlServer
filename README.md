@@ -5,7 +5,7 @@
 
 # El usuario debera logerase si tiene una cuenta creada
 ![image](https://github.com/user-attachments/assets/e41f2cfe-9697-4789-8a5d-5ea4608781df)
-sino podra hacerlo desde el mismo login
+sino podra crear una cuenta desde el mismo login
 ![image](https://github.com/user-attachments/assets/af6342a0-a504-4048-ad43-927f466a868e)
 Podra regresar al menu una vez haya creado su cuenta y podra acceder con las credenciales creadas: login y contraseña
 # Menu principal
