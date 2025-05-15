@@ -5,7 +5,7 @@
 
 # El usuario debera logerase si tiene una cuenta creada
 ![image](https://github.com/user-attachments/assets/e41f2cfe-9697-4789-8a5d-5ea4608781df)
-sino podra hacerlo desde el mismo login
+sino podra crear una cuenta desde el mismo login
 ![image](https://github.com/user-attachments/assets/af6342a0-a504-4048-ad43-927f466a868e)
 Podra regresar al menu una vez haya creado su cuenta y podra acceder con las credenciales creadas: login y contraseña
 # Menu principal
@@ -24,9 +24,9 @@ Podra regresar al menu una vez haya creado su cuenta y podra acceder con las cre
 ![image](https://github.com/user-attachments/assets/c567dca4-7eeb-4096-8b51-12f6119cf992)
 # Movimientos/Detalle Movimientos
 ![image](https://github.com/user-attachments/assets/161114be-5a5a-4b2b-aed2-5e7b907736b0)
-# Consultas/Consulta Movimientos - Consultar por rango de fechas los gastos y Depositos efectuadas - podra tambien enviar la informacion a excel
+# Consultas/Consulta Movimientos - Consultar por rango de fechas los gastos y Depositos efectuados - podra tambien enviar la informacion a excel
 ![image](https://github.com/user-attachments/assets/372d9dfb-fc6e-431d-ba09-3a4f1261bb85)
-# Consultas/Graficos comparativos: Podra en base a la informacion del grid creal graficos de barras, de area, de lineas, pipes y circulares ademas podra imprimir en formato pdf
+# Consultas/Graficos comparativos: Podra en base a la informacion del grid crear graficos de barras, de area, de lineas, pipes y circulares ademas podra imprimir en formato pdf
 ![image](https://github.com/user-attachments/assets/ad1c4154-60a8-4531-ae11-59b007cc0afb)
 ![image](https://github.com/user-attachments/assets/a39a2e0e-e016-4866-8274-93fca09be96e)
 # Opcion de Logout: se borraran los claims correspondientes y el usuario dejara de estar logueado
