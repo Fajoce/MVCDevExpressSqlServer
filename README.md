@@ -22,8 +22,10 @@ Podra regresar al menu una vez haya creado su cuenta y podra acceder con las cre
 # Movimientos/Registro gastos o Depositos- en caso que sea un gasto y tenga saldo suficiente lo realiza y disminuye el saldo del fondo sino aparecera un error y te dira cual es el disponible; si es una consignacion aumentara el saldo del fondo correspondiente
 ![image](https://github.com/user-attachments/assets/3eb75492-ba8b-4a5c-804b-5701f0eadf40)
 ![image](https://github.com/user-attachments/assets/c567dca4-7eeb-4096-8b51-12f6119cf992)
-# Movimientos/Detalle Movimientos
-![image](https://github.com/user-attachments/assets/161114be-5a5a-4b2b-aed2-5e7b907736b0)
+# Movimientos/Registro con Detalle gastos: 
+Podras realizar varios tipos de gastos con detalle - el sistema arroja un error en caso de que el gasto registrado previamente sea menor al que estableciste
+![image](https://github.com/user-attachments/assets/05bd2e92-d6f6-46e0-be3c-527621dd4325)
+
 # Consultas/Consulta Movimientos - Consultar por rango de fechas los gastos y Depositos efectuados - podra tambien enviar la informacion a excel
 ![image](https://github.com/user-attachments/assets/372d9dfb-fc6e-431d-ba09-3a4f1261bb85)
 # Consultas/Graficos comparativos: Podra en base a la informacion del grid crear graficos de barras, de area, de lineas, pipes y circulares ademas podra imprimir en formato pdf
