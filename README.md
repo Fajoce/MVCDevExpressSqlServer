@@ -11,13 +11,16 @@ Podra regresar al menu una vez haya creado su cuenta y podra acceder con las cre
 # Menu principal
 ![image](https://github.com/user-attachments/assets/81741387-872f-40ec-89b8-0215d030f811)
 # Mantenimiento/Opcion Tipo de Gastos (Crud)
+Nota: el usuario solo tendra acceso a los tipos de fondo que haya creado previamente
 ![image](https://github.com/user-attachments/assets/5a7e44a9-a0ef-4367-83fc-75df7ffcb662)
 # Mantenimiento/opcion Editar Perfil
 ![image](https://github.com/user-attachments/assets/15c8249f-2f2d-449c-92af-89c128ace02f)
 # Mantenimiento/Opcion Fondos monetarios (CRUD)
+El usuario solo tendra acceso a los tipos de fondos monetarios que haya creado previamente
 ![image](https://github.com/user-attachments/assets/415ba028-c47a-4fbe-b52c-01a4dfc0d8f8)
 ![image](https://github.com/user-attachments/assets/315b017e-10e7-4c9e-b26e-a204f5006b50)
 # Movimientos/Presupuestos
+el usuario solo tendra acceso a los Presupuestos que haya creado previamente
 ![image](https://github.com/user-attachments/assets/03bc4634-731a-49c4-bc7d-92f574a067bf)
 # Movimientos/Registro gastos o Depositos- en caso que sea un gasto y tenga saldo suficiente lo realiza y disminuye el saldo del fondo sino aparecera un error y te dira cual es el disponible; si es una consignacion aumentara el saldo del fondo correspondiente
 ![image](https://github.com/user-attachments/assets/3eb75492-ba8b-4a5c-804b-5701f0eadf40)
