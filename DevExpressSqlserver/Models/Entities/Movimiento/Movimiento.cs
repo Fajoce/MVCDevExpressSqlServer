@@ -16,7 +16,6 @@ namespace DevExpressSqlserver.Models.Entities
         public int FondoID { get; set; }
         public FondosMonetarios Fondo { get; set; }
 
-        [Required]
         public string TipoMovimiento { get; set; } // Gasto / Deposito
 
         [DataType(DataType.Currency)]

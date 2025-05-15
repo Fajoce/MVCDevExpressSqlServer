@@ -115,17 +115,29 @@ namespace DevExpressSqlserver.Controllers
         // Usado para cargar Tipos de Gasto al editar
         public IActionResult GetTiposGasto()
         {
-            var tipos = _context.TiposGasto.Select(t => new {
-                t.TipoGastoID,
-                t.Descripcion
-            });
+            var claim = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (claim == null)
+            {
+                return Unauthorized(); // o return Json(new { error = "Usuario no autenticado" });
+            }
+
+            int usuarioId = int.Parse(claim.Value);
+
+            var tipos = _context.TiposGasto
+                .Where(t => t.UsuarioId == usuarioId)
+                .Select(t => new {
+                    t.TipoGastoID,
+                    t.Descripcion
+                })
+                .ToList();
+
             return Json(tipos);
         }
         [HttpGet]
         public IActionResult ShowTiposGasto()
         {
             var tipos = _context.TiposGasto
-          .Select(t => new {
+             .Select(t => new {
               t.TipoGastoID,       
               t.Descripcion        
           })

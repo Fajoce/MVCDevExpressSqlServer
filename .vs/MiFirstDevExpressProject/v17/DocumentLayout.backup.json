@@ -3,68 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\tiposgastoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\tiposgastoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\movimientoregistrodegastoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\movimientoregistrodegastoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\movimientodepositoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\movimientodepositoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\graficoscomparativoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\graficoscomparativoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\fondomonetariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\fondomonetariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\registrogastoscondetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\registrogastoscondetallecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\filtrosmovimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\filtrosmovimientoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\views\\registrogastoscondetalle\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\views\\registrogastoscondetalle\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE9B2C8C-2CC7-4421-94CB-88D870DA1012}|TestProject\\TestProject.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\testproject\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE9B2C8C-2CC7-4421-94CB-88D870DA1012}|TestProject\\TestProject.csproj|solutionrelative:testproject\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\views\\tiposgastos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\views\\tiposgastos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE9B2C8C-2CC7-4421-94CB-88D870DA1012}|TestProject\\TestProject.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\testproject\\testproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FE9B2C8C-2CC7-4421-94CB-88D870DA1012}|TestProject\\TestProject.csproj|solutionrelative:testproject\\testproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\models\\entities\\tipogasto\\tipogasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\models\\entities\\tipogasto\\tipogasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\devexpresssqlserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\devexpresssqlserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\infraestructure\\conexion\\sberpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\infraestructure\\conexion\\sberpdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\models\\entities\\fondosmonetarios\\fondosmonetarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\models\\entities\\fondosmonetarios\\fondosmonetarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|c:\\users\\user\\source\\repos\\mifirstdevexpressproject\\devexpresssqlserver\\models\\entities\\movimiento\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8DF8FFA-A9E2-4748-8E55-15D9EDDB4422}|DevExpressSqlserver\\DevExpressSqlserver.csproj|solutionrelative:devexpresssqlserver\\models\\entities\\movimiento\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,209 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MovimientoRegistroDeGastosController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\MovimientoRegistroDeGastosController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T21:28:34.03Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PresupuestoController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\PresupuestoController.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\PresupuestoController.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\PresupuestoController.cs",
               "RelativeToolTip": "DevExpressSqlserver\\Controllers\\PresupuestoController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAgwHcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T21:28:34.005Z",
+              "WhenOpened": "2025-05-15T14:48:16.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TiposGastosController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\TiposGastosController.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\TiposGastosController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\TiposGastosController.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\TiposGastosController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T21:01:03.216Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T22:13:28.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MovimientoDepositosController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\MovimientoDepositosController.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\MovimientoDepositosController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\MovimientoDepositosController.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\MovimientoDepositosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T22:54:54.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GraficosComparativosController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\GraficosComparativosController.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\GraficosComparativosController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\GraficosComparativosController.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\GraficosComparativosController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABMAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T22:12:56.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FondoMonetarioController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\FondoMonetarioController.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\FondoMonetarioController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\FondoMonetarioController.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\FondoMonetarioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T23:51:01.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "FiltrosMovimientosController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
               "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
               "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
               "RelativeToolTip": "DevExpressSqlserver\\Controllers\\FiltrosMovimientosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T22:54:54.591Z",
+              "WhenOpened": "2025-05-15T14:48:16.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T22:13:08.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UnitTest.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\TestProject\\UnitTest.cs",
-              "RelativeDocumentMoniker": "TestProject\\UnitTest.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\TestProject\\UnitTest.cs",
-              "RelativeToolTip": "TestProject\\UnitTest.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T22:57:42.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TestProject.csproj",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\TestProject\\TestProject.csproj",
-              "RelativeDocumentMoniker": "TestProject\\TestProject.csproj",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\TestProject\\TestProject.csproj",
-              "RelativeToolTip": "TestProject\\TestProject.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-14T23:13:06.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DevExpressSqlserver.csproj",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\DevExpressSqlserver.csproj",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\DevExpressSqlserver.csproj",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\DevExpressSqlserver.csproj",
-              "RelativeToolTip": "DevExpressSqlserver\\DevExpressSqlserver.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-14T23:27:24.084Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Program.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Program.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T21:17:15.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SBERPDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Infraestructure\\Conexion\\SBERPDbContext.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Infraestructure\\Conexion\\SBERPDbContext.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Infraestructure\\Conexion\\SBERPDbContext.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Infraestructure\\Conexion\\SBERPDbContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAxwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T22:05:48.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "DevExpressSqlserver\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAEoAAAAAAAAAAIBJwFsAAABwAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\RegistroGastosConDetalle\\Create.cshtml",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\Views\\RegistroGastosConDetalle\\Create.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\RegistroGastosConDetalle\\Create.cshtml",
+              "RelativeToolTip": "DevExpressSqlserver\\Views\\RegistroGastosConDetalle\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-14T21:28:12.935Z"
+              "WhenOpened": "2025-05-15T14:57:37.415Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FondosMonetarios.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\FondosMonetarios\\FondosMonetarios.cs",
-              "RelativeDocumentMoniker": "DevExpressSqlserver\\Models\\Entities\\FondosMonetarios\\FondosMonetarios.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\FondosMonetarios\\FondosMonetarios.cs",
-              "RelativeToolTip": "DevExpressSqlserver\\Models\\Entities\\FondosMonetarios\\FondosMonetarios.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAIBJwBEAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RegistroGastosConDetalleController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\RegistroGastosConDetalleController.cs",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\Controllers\\RegistroGastosConDetalleController.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Controllers\\RegistroGastosConDetalleController.cs",
+              "RelativeToolTip": "DevExpressSqlserver\\Controllers\\RegistroGastosConDetalleController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T21:04:15.057Z"
+              "WhenOpened": "2025-05-15T13:01:50.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TipoGasto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\TipoGasto\\TipoGasto.cs",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\Models\\Entities\\TipoGasto\\TipoGasto.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\TipoGasto\\TipoGasto.cs",
+              "RelativeToolTip": "DevExpressSqlserver\\Models\\Entities\\TipoGasto\\TipoGasto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:55:34.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Movimiento.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "RelativeToolTip": "DevExpressSqlserver\\Models\\Entities\\Movimiento\\Movimiento.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T12:49:55.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\TiposGastos\\Index.cshtml",
+              "RelativeDocumentMoniker": "DevExpressSqlserver\\Views\\TiposGastos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MiFirstDevExpressProject\\DevExpressSqlserver\\Views\\TiposGastos\\Index.cshtml",
+              "RelativeToolTip": "DevExpressSqlserver\\Views\\TiposGastos\\Index.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-15T01:01:30.112Z",
+              "EditorCaption": ""
             }
           ]
         }
