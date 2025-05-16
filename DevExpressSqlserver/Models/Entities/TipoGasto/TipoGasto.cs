@@ -10,7 +10,7 @@ namespace DevExpressSqlserver.Models.Entities
         [Required]
         public string Descripcion { get; set; }
         public int UsuarioId { get; set; }
-        public decimal MontoPresupuestado { get; set; } = 1000000;
+        public decimal MontoPresupuestado { get; set; }
 
     }
 }
