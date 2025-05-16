@@ -53,7 +53,9 @@ namespace DevExpressSqlserver.Controllers
                 movimiento.TipoMovimiento = "Gasto"; // o "Deposito"
                 movimiento.Fecha = DateTime.Now;
                 movimiento.Monto = detalles.Sum(d => d.Monto);
+
                 using var transaction = await _context.Database.BeginTransactionAsync();
+
                 try
                 {
                     _context.Movimientos.Add(movimiento);
@@ -68,13 +70,14 @@ namespace DevExpressSqlserver.Controllers
 
                     await _context.SaveChangesAsync();
 
-                    // Validar presupuesto por tipo de gasto
+                    // Validar presupuesto y actualizar si es válido
                     var tipoGastoIds = detalles.Select(d => d.TipoGastoID).Distinct();
                     var presupuestos = await _context.TiposGasto
                         .Where(t => tipoGastoIds.Contains(t.TipoGastoID) && t.UsuarioId == usuarioId)
                         .ToListAsync();
 
                     var alertas = new List<string>();
+                    bool hayExceso = false;
 
                     foreach (var tipo in presupuestos)
                     {
@@ -85,11 +88,19 @@ namespace DevExpressSqlserver.Controllers
                         if (montoGastado > tipo.MontoPresupuestado)
                         {
                             alertas.Add($"Presupuesto sobregirado en '{tipo.Descripcion}': Presupuestado {tipo.MontoPresupuestado:C}, Gastado {montoGastado:C}");
+                            hayExceso = true;
+                        }
+                        else
+                        {
+                            tipo.MontoPresupuestado -= montoGastado;
+                            _context.TiposGasto.Update(tipo);
                         }
                     }
 
-                    if (alertas.Any())
+                    if (hayExceso)
                     {
+                        await transaction.RollbackAsync();
+
                         ViewData["FondosMonetarios"] = new SelectList(_context.FondosMonetarios, "FondoID", "Descripcion");
                         var tipoGastos = _context.TiposGasto.Select(t => new { t.TipoGastoID, t.Descripcion }).ToList();
                         ViewBag.TipoGastoListJson = JsonSerializer.Serialize(tipoGastos);
@@ -97,7 +108,9 @@ namespace DevExpressSqlserver.Controllers
                         return View(movimiento);
                     }
 
+                    await _context.SaveChangesAsync();
                     await transaction.CommitAsync();
+
                     return RedirectToAction("Create");
                 }
                 catch
@@ -106,6 +119,8 @@ namespace DevExpressSqlserver.Controllers
                     ModelState.AddModelError("", "Error al guardar los datos.");
                 }
             }
+
+            // Mostrar errores en consola para depuración
             foreach (var entry in ModelState)
             {
                 foreach (var error in entry.Value.Errors)
@@ -113,11 +128,12 @@ namespace DevExpressSqlserver.Controllers
                     Console.WriteLine($"Error en el campo '{entry.Key}': {error.ErrorMessage}");
                 }
             }
-        
-  
-            ViewData["FondosMonetarios"] = new SelectList(_context.FondosMonetarios, "FondoID", "Descripcion", movimiento.FondoID);
-            var tipoGastosReload = _context.TiposGasto.Select(t => new { t.TipoGastoID, t.Descripcion }).ToList();
-            ViewBag.TipoGastoListJson = JsonSerializer.Serialize(tipoGastosReload);
+
+            // Si algo falla, cargar datos nuevamente para la vista
+            ViewData["FondosMonetarios"] = new SelectList(_context.FondosMonetarios, "FondoID", "Descripcion");
+            var tipoGastosList = _context.TiposGasto.Select(t => new { t.TipoGastoID, t.Descripcion }).ToList();
+            ViewBag.TipoGastoListJson = JsonSerializer.Serialize(tipoGastosList);
+
             return View(movimiento);
         }
     }
