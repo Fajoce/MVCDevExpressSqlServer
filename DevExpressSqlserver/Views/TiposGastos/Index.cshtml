@@ -42,6 +42,10 @@
             .DataField("Descripcion")
             .Editor(e => e.TextBox())
             .Label(l => l.Text("Descripción"));
+             groupItems.AddSimple()
+             .DataField("MontoPresupuestado")
+             .Editor(e => e.TextBox())
+             .Label(l => l.Text("Monto Presupuestado"));
             });
         })
         )
