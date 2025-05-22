@@ -51,7 +51,8 @@ namespace DevExpressSqlserver.Controllers
                         select new TipoGasto
                         {
                             TipoGastoID = tg.TipoGastoID,
-                            Descripcion = tg.Descripcion
+                            Descripcion = tg.Descripcion,
+                            MontoPresupuestado = tg.MontoPresupuestado
                         };
             return Json(DataSourceLoader.Load(data, loadOptions));
         }
